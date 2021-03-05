@@ -23,7 +23,10 @@ class CompanyDetailRepository {
 
             override fun onResponse(call: Call, response: Response) {
                 if (response.isSuccessful) {
-                    val responseBodyString = response.body()?.string().orEmpty()
+                    val responseBodyString = response.body()?.string()
+                    ?.replace(" \"", " «")
+                        ?.replace("\" ", "» ")
+                        .orEmpty()
                     val company = parseServerResponse(responseBodyString)
                     callback(company)
                 } else {
@@ -49,7 +52,8 @@ class CompanyDetailRepository {
             listOf(
                 ContainerObjects.CompanyDetail(
                     id = id, name = name, img = img,
-                    description = description, lat = lat, lon = lon, www = www, phone = phone
+                    description = description,
+                    lat = lat, lon = lon, www = www, phone = phone
                 )
             )
         } catch (e: JSONException) {
