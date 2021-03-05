@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Test Application</string>
+    <string name="company_detail">Company detail</string>
+    <string name="company_name">Company name</string>
+    <string name="latitude">Latitude:</string>
+    <string name="longitude">Longitude:</string>
+    <string name="www">web site:</string>
+    <string name="phone">Phone:</string>
+    <string name="close_window">Close window</string>
+</resources>
