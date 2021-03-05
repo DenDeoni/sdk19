@@ -24,6 +24,8 @@ class CompanyDetailRepository {
             override fun onResponse(call: Call, response: Response) {
                 if (response.isSuccessful) {
                     val responseBodyString = response.body()?.string()
+                        ?.trim()
+                        ?.replace(". \"", ".\"")
                     ?.replace(" \"", " «")
                         ?.replace("\" ", "» ")
                         .orEmpty()
