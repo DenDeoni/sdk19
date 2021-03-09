@@ -65,8 +65,6 @@ class CompanyDetailDialog : DefaultViewBindingDialogFragment() {
             val details = listViewModel.companyDetail.value
             if (details != null) {
                 setDetailFields(details)
-            }
-            if (details != null) {
                 hideEmptyFields(details)
             }
         }
@@ -83,8 +81,6 @@ class CompanyDetailDialog : DefaultViewBindingDialogFragment() {
             binding.textViewName.text = details[0].name
             Glide.with(binding.imageViewDetailLogo)
                 .load(details[0].img)
-               // .centerCrop()
-               // .apply(RequestOptions.bitmapTransform(RoundedCorners(500)))
                 .into(binding.imageViewDetailLogo)
             binding.textViewDescription.text = details[0].description
             binding.textViewLat.text = details[0].lat.toString()

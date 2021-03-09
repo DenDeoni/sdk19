@@ -67,7 +67,6 @@ class CompanyListFragment : Fragment(R.layout.fragment_company_list) {
                 LinearLayoutManager.VERTICAL
             }
         } else {
-
             GridLayoutManager(context, 2, GridLayoutManager.VERTICAL, false)
         }
     }

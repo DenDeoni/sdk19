@@ -7,7 +7,7 @@ import okhttp3.Request
 
 object Networking {
 
-    val client = OkHttpClient()
+    private val client = OkHttpClient()
 
     fun getCompaniesCall(): Call {
 
