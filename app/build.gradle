@@ -10,7 +10,7 @@ android {
     buildToolsVersion "30.0.3"
 
     defaultConfig {
-        applicationId "com.test.lifehackstudio"
+        applicationId "com.test.sdk19"
         minSdkVersion 19
         targetSdkVersion 30
         versionCode 1
