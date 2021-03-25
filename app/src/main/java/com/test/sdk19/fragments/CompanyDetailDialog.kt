@@ -56,9 +56,7 @@ class CompanyDetailDialog : DefaultViewBindingDialogFragment() {
         return super.onCreateView(inflater, container, savedInstanceState)
     }
 
-    override fun onStart() {// initializations
-        val idCompany = Bundle().getLong(ID)
-        println("idCompany: $idCompany")
+    override fun onStart() {// initialization
         bindViewModel()
         super.onStart()
         dialog!!.window?.setLayout(
