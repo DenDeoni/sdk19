@@ -32,6 +32,7 @@ class CompanyDetailDialog : DefaultViewBindingDialogFragment() {
             val bundle = Bundle()
             bundle.putParcelable(LIST_VIEW_MODEL, listViewModel)
             bundle.putLong(ID, idItem)
+            dialog.arguments = bundle
             return dialog
         }
     }
